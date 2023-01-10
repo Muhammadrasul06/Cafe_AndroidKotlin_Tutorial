@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/drawable/background_button.xml" value="0.1565" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/drawable/background_otp.xml" value="0.1565" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/layout/activity_first_screen.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/layout/activity_main.xml" value="0.259375" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/layout/activity_otpactivity.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/layout/fragment_home.xml" value="0.259375" />
+        <entry key="..\:/Users/Hunter_DP/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial1/app/src/main/res/layout/fragment_search.xml" value="0.259375" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/drawable/background_button.xml" value="0.1585" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/drawable/background_edit_text.xml" value="0.1585" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/drawable/background_oval.xml" value="0.1585" />

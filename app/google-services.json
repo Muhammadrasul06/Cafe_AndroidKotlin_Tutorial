@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "993277561338",
+    "project_id": "cafe-androidkotlin-tutorial",
+    "storage_bucket": "cafe-androidkotlin-tutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993277561338:android:817ca470f13c8eaa8ebc43",
+        "android_client_info": {
+          "package_name": "com.example.cafe_androidkotlin_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993277561338-dmha4hqc9ko6ra0hm7vmlob0l5dcj4cg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cafe_androidkotlin_tutorial",
+            "certificate_hash": "9728b6573c9dcde3cc092459cb12140dafb7c471"
+          }
+        },
+        {
+          "client_id": "993277561338-nolo455cara0rt7cua05tmcp6i7n40ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARzoMrYWaTe8uQl8xKBSedEZ0UMVzpsS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993277561338-nolo455cara0rt7cua05tmcp6i7n40ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
