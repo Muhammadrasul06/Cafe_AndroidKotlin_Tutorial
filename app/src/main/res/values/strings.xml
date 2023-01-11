@@ -5,6 +5,7 @@
     <string name="familiya">Familiya</string>
     <string name="Telephone_number">Telefon raqam</string>
     <string name="parol">Parol</string>
+    <string name="qaytayuborish">Qayta yuborish ➔</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

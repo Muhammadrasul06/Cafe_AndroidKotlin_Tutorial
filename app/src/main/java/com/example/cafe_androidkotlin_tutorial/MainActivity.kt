@@ -31,22 +31,29 @@ class MainActivity : AppCompatActivity() {
         sendOTPBtn.setOnClickListener {
             number = phoneNumberET.text.trim().toString()
             if (number.isNotEmpty()) {
-                if (number.length == 9) {
-                    number = "+998$number"
-                    mProgressBar.visibility = View.VISIBLE
-                    val options = PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber(number)       // Phone number to verify
-                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                        .setActivity(this)                 // Activity (for callback binding)
-                        .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
-                        .build()
-                    PhoneAuthProvider.verifyPhoneNumber(options)
-
-                } else {
+                if (number.length != 9) {
                     Toast.makeText(this, "Iltimos raqamni to`g`ri yozing!", Toast.LENGTH_SHORT)
                         .show()
+                } else {
+                    if (number.length == 9) {
+                        number = "+998$number"
+                        mProgressBar.visibility = View.VISIBLE
+                        val options = PhoneAuthOptions.newBuilder(auth)
+                            .setPhoneNumber(number)       // Phone number to verify
+                            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                            .setActivity(this)                 // Activity (for callback binding)
+                            .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
+                            .build()
+                        PhoneAuthProvider.verifyPhoneNumber(options)
+
+                    } else {
+                        Toast.makeText(this, "Iltimos raqamni to`g`ri yozing!", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+
                 }
-            } else {
+            }
+            else {
                 Toast.makeText(this, "Iltimos raqamni kiriting!", Toast.LENGTH_SHORT).show()
 
             }

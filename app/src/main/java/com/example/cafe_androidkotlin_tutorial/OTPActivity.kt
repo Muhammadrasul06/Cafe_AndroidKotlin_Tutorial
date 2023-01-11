@@ -1,7 +1,9 @@
 package com.example.cafe_androidkotlin_tutorial
 
+import android.R.id.button1
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Looper
 import android.text.Editable
@@ -14,11 +16,12 @@ import com.example.cafe_androidkotlin_tutorial.databinding.ActivityOtpactivityBi
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
-import com.google.firebase.auth.R
 import java.util.concurrent.TimeUnit
+
 
 class OTPActivity : AppCompatActivity() {
     lateinit var binding: ActivityOtpactivityBinding
+    private var CountdownTimer: CountDownTimer? = null
     private lateinit var auth: FirebaseAuth
     private lateinit var verifyBtn: Button
     private lateinit var resendTV: TextView
@@ -42,8 +45,12 @@ class OTPActivity : AppCompatActivity() {
         phoneNumber = intent.getStringExtra("phoneNumber")!!
 
         val number = intent.getStringExtra("Number")
-        binding.txtNothing.text=number+" raqamiga tasdiqlash kodi yuborildi"
+        binding.txtNothing.text = number + " raqamiga tasdiqlash kodi yuborildi"
+        timer()
 
+        binding.iosBackIc.setOnClickListener {
+
+        }
         init()
         progressBar.visibility = View.INVISIBLE
         addTextChangeListener()
@@ -95,18 +102,20 @@ class OTPActivity : AppCompatActivity() {
         Handler(Looper.myLooper()!!).postDelayed(Runnable {
             resendTV.visibility = View.VISIBLE
             resendTV.isEnabled = true
-        }, 60000)
+        }, 180000)
     }
 
     private fun resendVerificationCode() {
         val options = PhoneAuthOptions.newBuilder(auth)
             .setPhoneNumber(phoneNumber)       // Phone number to verify
-            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+            .setTimeout(180L, TimeUnit.SECONDS) // Timeout and unit
             .setActivity(this)                 // Activity (for callback binding)
             .setCallbacks(callbacks)
             .setForceResendingToken(resendToken)// OnVerificationStateChangedCallbacks
             .build()
+        timer()
         PhoneAuthProvider.verifyPhoneNumber(options)
+        Toast.makeText(this, "Tasdiqlash kodi muvaffaqiyatli yuborildi", Toast.LENGTH_SHORT).show()
     }
 
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -162,8 +171,10 @@ class OTPActivity : AppCompatActivity() {
                     Log.d("TAG", "signInWithPhoneAuthCredential: ${task.exception.toString()}")
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
                         // The verification code entered was invalid
-                        Toast.makeText(this, "Tasdiqlash kodi noto`g`ri kiritildi", Toast.LENGTH_LONG).show()
                     }
+                    Toast.makeText(this,
+                        "Tasdiqlash kodi noto`g`ri kiritildi",
+                        Toast.LENGTH_LONG).show()
                     // Update UI
                 }
                 progressBar.visibility = View.VISIBLE
@@ -221,5 +232,22 @@ class OTPActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    fun timer() {
+        CountdownTimer = object : CountDownTimer(180000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                binding.timer.visibility = View.VISIBLE
+                binding.resendTextView.visibility = View.INVISIBLE
+                val minutes: Long = TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) % 60
+                val seconds: Long = TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) % 60
+                binding.timer.text = String.format("%02d : %02d", minutes, seconds)
+            }
+
+            override fun onFinish() {
+                binding.timer.visibility = View.INVISIBLE
+                binding.resendTextView.visibility = View.VISIBLE
+            }
+        }.start()
     }
 }
