@@ -87,5 +87,80 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recyclerView" />
 
+    <HorizontalScrollView
+        android:id="@+id/hrscroll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_Food">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:text="MASHXUR"
+                    android:textAlignment="center" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="YANGI"
+                    android:textAlignment="center" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:text="AKSIYA"
+                    android:textAlignment="center" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hrscroll">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_tips_foods" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_tips_foods" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

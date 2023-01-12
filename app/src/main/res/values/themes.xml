@@ -30,4 +30,10 @@
         <item name="android:textSize">14sp</item>
         <item name="android:singleLine">true</item>
     </style>
+
+    <style name="chipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="android:textColor">@color/chip_textcolor</item>
+        <item name="checkedIconTint">@color/chip_textcolor</item>
+    </style>
 </resources>

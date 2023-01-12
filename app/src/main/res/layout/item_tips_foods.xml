@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="175dp"
+    android:layout_marginEnd="11dp"
+    android:layout_marginStart="11dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/background_edit_text"
+    android:layout_height="244dp">
+
+    <ImageView
+        android:id="@+id/img_Food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_tip_foods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_FoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:text="Burger"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_Food" />
+
+    <TextView
+        android:id="@+id/txt_CafeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#A8A8A8"
+        android:fontFamily="@font/montserrat"
+        android:text="Eden cafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_FoodName" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22.9sp"
+        android:fontFamily="@font/montserrat"
+        android:text="21.000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_CafeName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="so’m"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
+        android:textSize="15.54sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_price" />
+</androidx.constraintlayout.widget.ConstraintLayout>

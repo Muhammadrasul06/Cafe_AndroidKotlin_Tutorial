@@ -26,10 +26,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/activity_first_screen.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/activity_otpactivity.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/fragment_home.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/fragment_basket.xml" value="0.26875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/fragment_home.xml" value="0.18777292576419213" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/fragment_profile.xml" value="0.26875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/fragment_search.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/item_all_foods.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/item_circle_cafe.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/layout/item_tips_foods.xml" value="0.271875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Cafe_AndroidKotlin_Tutorial/app/src/main/res/menu/bottom_menu.xml" value="0.27291666666666664" />
       </map>
     </option>
