@@ -39,5 +39,12 @@ class HomeFragment : Fragment() {
         adapter.submitList(kafelar)
         binding.recyclerView.adapter = adapter
 
+
+        binding.searchView.setActivated(true)
+        binding.searchView.setQueryHint("Ovqatni qidirish")
+        binding.searchView.onActionViewExpanded()
+        binding.searchView.setIconified(false)
+        binding.searchView.clearFocus()
+
     }
 }

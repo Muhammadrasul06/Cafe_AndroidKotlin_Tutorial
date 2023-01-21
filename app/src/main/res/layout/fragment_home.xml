@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="90dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="90dp"
             android:background="@drawable/background_edit_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,14 +28,14 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="55dp"
             android:layout_height="45dp"
-            app:iconGravity="start"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="30sp"
-            app:icon="@drawable/ic_location"
-            app:cornerRadius="2dp"
-            android:background="@drawable/background_button"
             android:layout_gravity="end|center"
-            android:layout_marginTop="5dp" />
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_button"
+            app:cornerRadius="2dp"
+            app:icon="@drawable/ic_location"
+            app:iconGravity="start" />
 
     </FrameLayout>
 
@@ -52,27 +52,84 @@
 
     <TextView
         android:id="@+id/txt_Cafe"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPager"
-        android:text="Kafelar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Kafelar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cafelar"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_Cafe">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anor_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerView"
-    android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp"
-    app:layout_constraintTop_toBottomOf="@id/txt_Cafe"
-    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    tools:listitem="@layout/item_circle_cafe"
-    android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cafelar2"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintStart_toEndOf="@id/cafelar"
+        app:layout_constraintTop_toBottomOf="@id/txt_Cafe">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eden_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cafelar3"
+        android:layout_width="98dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_circle"
+        app:layout_constraintStart_toEndOf="@id/cafelar2"
+        app:layout_constraintTop_toBottomOf="@id/txt_Cafe">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zaytun_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/txt_Food"
@@ -85,17 +142,78 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerView" />
+        app:layout_constraintTop_toBottomOf="@id/cafelar" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/hrscroll1"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_Food">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:checkable="true"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:text="🍽"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="🍔"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="🍕"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/chipStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="🌭"
+                    android:textAlignment="center"
+                    android:textSize="50sp" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
 
     <HorizontalScrollView
         android:id="@+id/hrscroll"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="21dp"
         android:scrollbars="none"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_Food">
+        app:layout_constraintTop_toBottomOf="@id/hrscroll1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -142,14 +260,9 @@
         app:layout_constraintTop_toBottomOf="@id/hrscroll">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_tips_foods" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
@@ -157,6 +270,11 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_tips_foods" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_tips_foods" />
 
 
         </LinearLayout>
